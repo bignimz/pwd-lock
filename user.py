@@ -12,3 +12,13 @@ class User:
         """
         self.username = username
         self.password = password
+
+    def save_user(self):
+        """"
+        Method to save new user in the users list
+        """
+        User.user_list.append(self)
+
+    @classmethod
+    def display_user(cls):
+        return cls.user_list

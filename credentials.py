@@ -32,3 +32,9 @@ class Credentials:
         Method to store account credentials from credentials list
         """
         Credentials.credentials_list.append(self)
+
+    def delete_credentials(self):
+        """
+        Method to deletes account credentials from credentials list
+        """
+        Credentials.credentials_list.remove(self)

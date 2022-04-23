@@ -1,4 +1,4 @@
-import User
+from user import User
 
 
 class Credentials:
@@ -15,3 +15,6 @@ class Credentials:
         """
         user = ""
         for user in User.user_list:
+            if(user.username == username and user.password == password):
+                user == user.username
+                return user

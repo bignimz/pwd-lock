@@ -97,16 +97,16 @@ def copy_password(account):
 
 
 def passlocker():
-    print("Hello Welcome to Pass Locker...\n Please enter one of the following to proceed.\n CA ---  To Create New Account  \n LI ---  If You Have An Account  \n")
+    print("Hello Welcome to Password Locker...\n Please enter one of the following to proceed.\n CA ---  To Create New Account  \n LI ---  If You Have An Account  \n")
     short_code = input("").lower().strip()
     if short_code == "ca":
         print("Sign Up")
         print('*' * 50)
         username = input("User_name: ")
         while True:
-            print(" TP - To type your own pasword:\n GP - To generate random Password")
+            print(" CP - To type your own pasword:\n GP - To generate random Password")
             password_Choice = input().lower().strip()
-            if password_Choice == 'tp':
+            if password_Choice == 'cp':
                 password = input("Enter Password\n")
                 break
             elif password_Choice == 'gp':
@@ -127,7 +127,7 @@ def passlocker():
         password = input("password: ")
         login = login_user(username, password)
         if login_user == login:
-            print(f"Hello {username}.Welcome To PassWord Locker Manager")
+            print(f"Hello {username}.Welcome To Your PassWord Locker Account")
             print('\n')
     while True:
         print("Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n")
@@ -196,19 +196,19 @@ def passlocker():
                 print('\n')
             else:
                 print(
-                    "That Credential you want to delete does not exist in your store yet")
+                    "The deleted credential does not exist in the credential list")
 
         elif short_code == 'gp':
 
             password = generate_Password()
             print(
-                f" {password} Has been generated succesfull. You can proceed to use it to your account")
+                f" {password} Has been generated succesfully")
         elif short_code == 'ex':
             print("Thanks for using Password Locker..!")
             break
         else:
             print(
-                "Wrong entry... Check your entry again and let it match those in the menu")
+                "Wrong entry, Please enter the right option")
     else:
         print("Please enter a valid input to continue")
 

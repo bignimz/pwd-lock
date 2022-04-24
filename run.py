@@ -97,7 +97,7 @@ def copy_password(account):
 
 
 def passlocker():
-    print("Hello Welcome to Pass Locker...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n LI ---  Have An Account  \n")
+    print("Hello Welcome to Pass Locker...\n Please enter one of the following to proceed.\n CA ---  To Create New Account  \n LI ---  If You Have An Account  \n")
     short_code = input("").lower().strip()
     if short_code == "ca":
         print("Sign Up")
@@ -204,7 +204,7 @@ def passlocker():
             print(
                 f" {password} Has been generated succesfull. You can proceed to use it to your account")
         elif short_code == 'ex':
-            print("Thanks for using passwords store manager.. See you next time!")
+            print("Thanks for using Password Locker..!")
             break
         else:
             print(

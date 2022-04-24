@@ -47,7 +47,7 @@ def save_credentials(credentials):
     """
     Function to save Credentials to the credentials list
     """
-    credentials. save_details()
+    return credentials.save_credentials()
 
 
 def display_accounts_details():
@@ -100,7 +100,7 @@ def passlocker():
     print("Hello Welcome to Password Locker...\n Please enter one of the following to proceed.\n CA ---  To Create New Account  \n LI ---  If You Have An Account  \n")
     short_code = input("").lower().strip()
     if short_code == "ca":
-        print("Sign Up")
+        print("Create Account")
         print('*' * 50)
         username = input("User_name: ")
         while True:
